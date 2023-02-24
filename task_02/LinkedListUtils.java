@@ -11,16 +11,12 @@ import java.util.Random;
 
 public class LinkedListUtils {
 
-    private LinkedList<Integer> linkedList = new LinkedList<>();
-
-    LinkedList<Integer> enqueue(){
+    void enqueue(LinkedList<Integer> linkedList){
         Random rnd = new Random();
         linkedList.addLast(rnd.nextInt(-100, 100));
-
-        return linkedList;
     }
 
-    Integer dequeue(){
+    Integer dequeue(LinkedList<Integer> linkedList){
         if (linkedList.size() > 0) {
             return linkedList.remove(0);
         } else {
@@ -28,7 +24,7 @@ public class LinkedListUtils {
         }
     }
 
-    Integer first(){
+    Integer first(LinkedList<Integer> linkedList){
         if (linkedList.size() > 0) {
             return linkedList.getFirst();
         } else {
